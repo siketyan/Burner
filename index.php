@@ -5,13 +5,13 @@
   if (!empty($_GET['i'])) {
     $url = $_GET['i'];
   } else {    
-    $key = "eA8yVmShCT0Y494DSDOW9PUgt";
-    $csecret = "h1o2qlALbloAkeFckIghl7ajB0fuqi3n8LE7y1xVJ5pMod0XYv";
-    $token = "1612233866-FgFwyKCrqlT0Gdk023Qln3ZfmHW5e6f47KEidCt";
-    $secret = "7TG7H0LrjOcHFVgGVjfS16qpnThQdwiC4sKQPEhxVteyJ";
+    $key = ""; // Consumer Key
+    $csecret = ""; // Consumer Secret
+    $token = ""; // Access Token
+    $secret = ""; // Access Token Secret
     
     $user = htmlspecialchars($_GET['u']);
-    $sql = new mysqli("localhost", "knhyaki", "oytYMBJ4blI5uBhj", "knhyaki");
+    $sql = new mysqli("localhost", "burner", ""/* MySQL Password */, "burner");
     $result = $sql->query("SELECT * FROM `icons` WHERE `name` = \"$user\" LIMIT 1");
     
     if ($result->num_rows != 1) {
